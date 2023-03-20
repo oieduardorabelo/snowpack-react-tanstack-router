@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "postinstall": "node node_modules/.bin/simple-git-hooks"
+  },
+  "devDependencies": {
+    "nano-staged": "^0.8.0",
+    "prettier": "^2.8.4",
+    "prettier-package-json": "^2.8.0",
+    "simple-git-hooks": "^2.8.1",
+    "snowpack": "^3.8.8",
+    "typescript": "^5.0.2"
+  },
+  "nano-staged": {
+    "*.{js,ts}": "prettier --write",
+    "package.json": "prettier-package-json --write"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true
+  }
+}
